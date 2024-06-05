@@ -27,7 +27,21 @@ OnlyFlans es una tienda en línea especializada en la venta de una variedad de f
 - Diseño y desarrollo de la página de detalles del flan, renderizando desde el id del objeto, incluyendo la visualización de reseñas y calificaciones de otros usuarios, así como el cálculo del promedio de calificación.
 
 ### Imágenes
+## Imágenes del Sitio Base
 
+### Inicio
+
+1. ![Inicio](Inicio_diferenciado.png)
+
+### Bienvenida Usuario
+
+2. ![Bienvenida Usuario](Bienvenido_diferenciado.png)
+
+### Contacto
+
+3. ![Contacto](Contacto.png)
+
+## Imagenes de Características Personalizadas
 1. **Agregar Reseña**
    ![Agregar Reseña](img/agregarReseña.png)
 
@@ -36,3 +50,6 @@ OnlyFlans es una tienda en línea especializada en la venta de una variedad de f
 
 3. **Reseñas con Estrellas y Promedio de Valoración**
    ![Reseñas con Estrellas y Promedio de Valoración](img/reseña_estrellas_promedio.png)
+
+### Autor
+## ![GabrielRecabarren](https://github.com/GabrielRecabarren)
