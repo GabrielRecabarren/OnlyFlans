@@ -52,4 +52,4 @@ OnlyFlans es una tienda en línea especializada en la venta de una variedad de f
    ![Reseñas con Estrellas y Promedio de Valoración](img/reseña_estrellas_promedio.png)
 
 ### Autor
-## ![GabrielRecabarren](https://github.com/GabrielRecabarren)
+## [GabrielRecabarren](https://github.com/GabrielRecabarren)
