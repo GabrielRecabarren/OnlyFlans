@@ -1,0 +1,39 @@
+
+   {% extends 'base.html' %}
+
+{% block 'base.html'%}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">¡Bienvenid@ a OnlyFlans!</h1>
+    <p class="lead">Ricos flanes te esperan.</p>
+    <hr class="my-4">
+    <p>Explora nuestros flanes y conoce más sobre nosotros.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'contacto' %}" role="button">Contáctanos</a>
+</div>
+<div class="container">
+        <h1 class="my-4">Lista de Flanes</h1>
+
+        <div class="row">
+            {% for flan in flanes_publicos %}
+                <div class="col-md-4">
+                   <div class="card mb-4" onclick="location.href='{% url 'flan_detail' flan.flan_uuid %}'">
+                        <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ flan.name }}</h5>
+                            <p class="card-text">{{ flan.description }}</p>
+                            <p class="card-text"><small class="text-muted">{{ flan.slug }}</small></p>
+                            <p class="card-text">{{ flan.is_private|yesno:"Privado,Público" }}</p>
+                        </div>
+                    </div>
+                
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+        {% endblock %}
+{% endblock %}
+
+   
+
+   
+

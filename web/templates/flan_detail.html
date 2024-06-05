@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h1>{{ flan.name }}</h1>
+        </div>
+        <div class="card-body">
+            <div class="text-center mb-3">
+                <img src="{{ flan.image_url }}" alt="{{ flan.name }}" class="img-fluid rounded">
+            </div>
+            <p><strong>Descripción:</strong> {{ flan.description }}</p>
+            <p><strong>Slug:</strong> {{ flan.slug }}</p>
+            <p><strong>Privacidad:</strong> {{ flan.is_private|yesno:"Privado,Público" }}</p>
+            <p><strong>Rating Promedio:</strong> {{ average_rating|default:"Sin calificaciones" }}</p>
+       </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Reseñas</h2>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                {% for review in reviews %}
+                    <li class="list-group-item">
+                       <span class="stars">
+                           {% for star in stars %}
+                                {% if star < review.rating %}
+                                    <i class="fas fa-star"></i>
+                                {% else %}
+                                    <i class="far fa-star"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card-footer text-end">
+            <a href="{% url 'add_review' flan.flan_uuid %}" class="btn btn-primary">Añadir Reseña</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container'>
+
+    <div class="col-12 col-md-6 offset-0 offset-md-3 mt-4 mb-4">
+        <h3 class="text-center">Contáctanos</h3>
+    </div>
+
+    <form action='/contacto' method='post'>
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <!-- Campo customer_email -->
+        <div class="mb-3">
+            <label for="{{ form.customer_email.id_for_label }}" class="form-label">
+                {{ form.customer_email.label_tag}}
+            </label>
+            <input placeholder="Correo" type="email" class="form-control" name="{{ form.customer_email.html_name }}"
+                value="{{ form.customer_email.value }}" required>
+            <!-- Mostrar errores específicos del campo customer_email -->
+            {% if form.customer_email.errors %}
+            <div class="text-danger">
+                {% for error in form.customer_email.errors %}
+                {{ error }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Campo customer_name -->
+        <div class="mb-3">
+            <label for="{{ form.customer_name.id_for_label }}" class="form-label">{{ form.customer_name.label }}</label>
+            <input type="text" class="form-control" name="{{ form.customer_name.html_name }}"
+                value="{{ form.customer_name.value }}" required>
+            <!-- Mostrar errores específicos del campo customer_name -->
+            {% if form.customer_name.errors %}
+            <div class="text-danger">
+                {% for error in form.customer_name.errors %}
+                {{ error }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Campo message -->
+        <div class="mb-3">
+            <label for="{{ form.message.id_for_label }}" class="form-label">{{ form.message.label }}</label>
+            <textarea class="form-control" name="{{ form.message.html_name }}" rows="3"
+                required>{{ form.message.value }}</textarea>
+            <!-- Mostrar errores específicos del campo message -->
+            {% if form.message.errors %}
+            <div class="text-danger">
+                {% for error in form.message.errors %}
+                {{ error }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}
