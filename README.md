@@ -31,15 +31,15 @@ OnlyFlans es una tienda en línea especializada en la venta de una variedad de f
 
 ### Inicio
 
-1. ![Inicio](Inicio_diferenciado.png)
+1. ![Inicio](img/Inicio_diferenciado.png)
 
 ### Bienvenida Usuario
 
-2. ![Bienvenida Usuario](Bienvenido_diferenciado.png)
+2. ![Bienvenida Usuario](img/Bienvenido_diferenciado.png)
 
 ### Contacto
 
-3. ![Contacto](Contacto.png)
+3. ![Contacto](img/Contacto.png)
 
 ## Imagenes de Características Personalizadas
 1. **Agregar Reseña**
@@ -50,6 +50,17 @@ OnlyFlans es una tienda en línea especializada en la venta de una variedad de f
 
 3. **Reseñas con Estrellas y Promedio de Valoración**
    ![Reseñas con Estrellas y Promedio de Valoración](img/reseña_estrellas_promedio.png)
+
+## Instalación
+
+1. Clona este repositorio: `git clone <URL_del_repositorio>`
+2. Navega hasta el directorio del proyecto: `cd nombre_del_directorio`
+3. Instala las dependencias: `pip install -r requirements.txt`
+
+## Uso
+
+1. Ejecuta el servidor de desarrollo de Django: `python manage.py runserver`
+2. Abre tu navegador y visita: `http://localhost:8000`
 
 ### Autor
 ## [GabrielRecabarren](https://github.com/GabrielRecabarren)
